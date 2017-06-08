@@ -1,0 +1,19 @@
+{
+  "name": "img-proxy-svr",
+  "version": "0.0.1",
+  "description": "a proxy httpServer for html5 http request image",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "proxy",
+    "http",
+    "image"
+  ],
+  "author": "Monkey Jiao",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
