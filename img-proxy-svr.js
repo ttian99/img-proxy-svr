@@ -21,10 +21,21 @@ let server = http.createServer((request, response) => {
             response.setHeader('Access-Control-Allow-Headers', 'X-PINGOTHER, Content-Type');
             response.setHeader('Access-Control-Max-Age', '86400');
             Request(targetUrl).pipe(response);
+            console.debug('==> targetUrl: ' + targetUrl);
+
+            // Request
+            //     .get(targetUrl)
+            //     .on('response', function (response) {
+            //         console.log(response.statusCode) // 200 
+            //         console.log(response.headers['content-type']) // 'image/png' 
+            //         console.log(JSON.stringify(response));
+            //     })
+            //     // .pipe(request.put('http://mysite.com/img.png'))
+            //     .pipe(response);
         }
     } catch (e) {
-        console.log('request error' + e);
+        console.error('request error' + e);
     }
 });
 server.listen(port);
-console.log('==> svr is listen on: ' + port);
+console.error('==> svr is listen on: ' + port);

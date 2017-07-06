@@ -4,7 +4,8 @@
   "description": "a proxy httpServer for html5 http request image",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "pm2 start img-proxy-svr.js",
+    "test": "node img-proxy-svr.js"
   },
   "keywords": [
     "proxy",
