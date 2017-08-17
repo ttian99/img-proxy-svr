@@ -1,10 +1,19 @@
 var http = require('http');
 var URL = require('url');
 var Request = require('request');
+var fs = require('fs');
 
-var port = 8000; // 端口
-var method = '?imgUrl='; // 方法
+// 读取配置文件
+var cfg = fs.readFileSync('config.json', 'utf-8');
+try {
+    cfg = JSON.parse(cfg);
+} catch(e) {
+    console.error('config error: ' + e);
+}
+var port = cfg.port; // 端口
+var method = cfg.method;  // 方法
 
+// 注册服务器监听
 let server = http.createServer((request, response) => {
     try {
         let requestUrlObj = URL.parse(request.url);

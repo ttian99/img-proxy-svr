@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "pm2 start img-proxy-svr.js",
+    "stop": "pm2 delete img-proxy-svr",
+    "restart": "pm2 restart img-proxy-svr",
     "test": "node img-proxy-svr.js"
   },
   "keywords": [
